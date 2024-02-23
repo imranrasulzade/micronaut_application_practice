@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
-import io.swagger.v3.oas.annotations.servers.Server;
 
 //@SecurityScheme(
 //        name = "openid",
@@ -22,8 +21,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
                 description = "just description",
                 license = @License(name = "license", url = "https://google.com"),
                 contact = @Contact(url = "https://github.com/imranrasulzade", name = "imran", email = "rasulzade002@gmail.com")
-        ),
-        servers = @Server(url = "https://guides.micronaut.io")
+        )
 )
 public class Application {
 

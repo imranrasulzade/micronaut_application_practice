@@ -11,7 +11,6 @@ import java.net.URI;
 class HomeController {
 
     private final static URI SWAGGER_UI = UriBuilder.of("/swagger-ui").path("index.html").build();
-
     @Get
     @Hidden
     HttpResponse<?> home() {
