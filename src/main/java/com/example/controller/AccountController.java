@@ -6,12 +6,9 @@ import com.example.service.AccountService;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
-import io.micronaut.http.uri.UriBuilder;
-import jakarta.inject.Inject;
+
 import lombok.RequiredArgsConstructor;
 
-import java.net.URI;
-import java.util.List;
 
 @Controller("/account")
 @RequiredArgsConstructor
@@ -33,6 +30,5 @@ public class AccountController {
     @Get
     public HttpResponse<?> get(){
         return HttpResponse.ok().body(accountService.get());}
-
 
 }
