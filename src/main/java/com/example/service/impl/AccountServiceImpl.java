@@ -6,17 +6,19 @@ import com.example.model.request.AccountReqDto;
 import com.example.model.response.AccountRespDto;
 import com.example.repository.AccountRepository;
 import com.example.service.AccountService;
-import jakarta.inject.Inject;
+
 import jakarta.inject.Singleton;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
 @Singleton
+@RequiredArgsConstructor
 public class AccountServiceImpl implements AccountService {
-    @Inject
-    private AccountRepository accountRepository;
-    @Inject
-    private AccountMapper accountMapper;
+
+    private final AccountRepository accountRepository;
+
+    private final AccountMapper accountMapper;
 
     @Override
     public AccountRespDto getById(Integer id) {

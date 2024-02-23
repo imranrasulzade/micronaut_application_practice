@@ -18,8 +18,6 @@ import java.util.List;
 public class AccountController {
 
     private final AccountService accountService;
-    private final static URI SWAGGER_UI = UriBuilder.of("/swagger-ui").path("index.html").build();
-
     @Get("/{id}")
     public AccountRespDto getById(@PathVariable Integer id) {
         return accountService.getById(id);
